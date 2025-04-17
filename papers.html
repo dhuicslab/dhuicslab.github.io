@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papers - CS Research Laboratory</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ICS Lab</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="papers.html" class="active">Papers</a></li>
+                    <li><a href="members.html">Members</a></li>
+                </ul>
+            </nav>
+            <!-- <div class="get-help">
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div> -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Research Papers</h1>
+        </div>
+    </section>
+
+    <section class="papers-search">
+        <div class="container">
+            <div class="search-container fade-in">
+                <input type="text" id="paper-search" placeholder="Search by title, author, or conference..." class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filter-options">
+                <select id="year-filter" class="filter-select">
+                    <option value="">All Years</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+                <select id="topic-filter" class="filter-select">
+                    <option value="">All Topics</option>
+                    <option value="Privacy">Privacy & Security</option>
+                    <option value="Neural">Neural Networks</option>
+                    <option value="Vision">Computer Vision</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="papers-list">
+        <div class="container">
+            <div class="papers-container">
+                <div class="paper-card fade-in">
+                    <div class="paper-image">
+                        <img src="images/paper-1.jpg" alt="Paper Thumbnail">
+                    </div>
+                    <div class="paper-info">
+                        <h3 class="paper-title">Privacy-Preserving Deep Learning in Federated Environments</h3>
+                        <p class="paper-authors">Sarah Johnson, Michael Chen, Li Wei</p>
+                        <p class="paper-conference">IEEE Symposium on Security and Privacy (SP), 2023</p>
+                        <a href="papers/paper-detail-1.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="paper-card fade-in-delay">
+                    <div class="paper-image">
+                        <img src="images/paper-2.jpg" alt="Paper Thumbnail">
+                    </div>
+                    <div class="paper-info">
+                        <h3 class="paper-title">MicroNet: Efficient Neural Network Architecture for Mobile Devices</h3>
+                        <p class="paper-authors">David Rodriguez, Jessica Kim, Thomas Clark</p>
+                        <p class="paper-conference">Neural Information Processing Systems (NeurIPS), 2022</p>
+                        <a href="paper-detail-2.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="paper-card fade-in-delay-2">
+                    <div class="paper-image">
+                        <img src="images/paper-3.jpg" alt="Paper Thumbnail">
+                    </div>
+                    <div class="paper-info">
+                        <h3 class="paper-title">Differential Privacy Guarantees for Neural Network Training</h3>
+                        <p class="paper-authors">Sarah Johnson, Emily Parker</p>
+                        <p class="paper-conference">ACM Conference on Computer and Communications Security (CCS), 2023</p>
+                        <a href="paper-detail-3.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="paper-card fade-in">
+                    <div class="paper-image">
+                        <img src="images/paper-4.jpg" alt="Paper Thumbnail">
+                    </div>
+                    <div class="paper-info">
+                        <h3 class="paper-title">Quantization Techniques for Low-Power Neural Network Inference</h3>
+                        <p class="paper-authors">Jessica Kim, David Rodriguez</p>
+                        <p class="paper-conference">International Conference on Machine Learning (ICML), 2022</p>
+                        <a href="paper-detail-4.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="paper-card fade-in-delay">
+                    <div class="paper-image">
+                        <img src="images/paper-5.jpg" alt="Paper Thumbnail">
+                    </div>
+                    <div class="paper-info">
+                        <h3 class="paper-title">Secure Multi-Party Computation for Collaborative Machine Learning</h3>
+                        <p class="paper-authors">Michael Chen, Sarah Johnson, Li Wei</p>
+                        <p class="paper-conference">USENIX Security Symposium, 2022</p>
+                        <a href="paper-detail-5.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="paper-card fade-in-delay-2">
+                    <div class="paper-image">
+                        <img src="images/paper-6.jpg" alt="Paper Thumbnail">
+                    </div>
+                    <div class="paper-info">
+                        <h3 class="paper-title">Deep Learning for 3D Object Recognition in Unstructured Environments</h3>
+                        <p class="paper-authors">James Wong, Sophia Martinez, Robert Johnson</p>
+                        <p class="paper-conference">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023</p>
+                        <a href="paper-detail-6.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="paper-card fade-in">
+                    <div class="paper-image">
+                        <img src="images/paper-7.jpg" alt="Paper Thumbnail">
+                    </div>
+                    <div class="paper-info">
+                        <h3 class="paper-title">Multi-Object Tracking in Dynamic Scenes with Occlusion</h3>
+                        <p class="paper-authors">Sophia Martinez, James Wong</p>
+                        <p class="paper-conference">European Conference on Computer Vision (ECCV), 2022</p>
+                        <a href="paper-detail-7.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>ICS Lab</h2>
+                    <p>Advancing Computer Science Research</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="papers.html">Papers</a></li>
+                        <li><a href="members.html">Members</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 图文信息中心822</p>
+                    <p><i class="fas fa-envelope"></i> changshan@dhu.edu.cn</p>
+                    <!-- <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2016 ICS Laboratory. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple search functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('paper-search');
+            const yearFilter = document.getElementById('year-filter');
+            const topicFilter = document.getElementById('topic-filter');
+            const paperCards = document.querySelectorAll('.paper-card');
+            
+            function filterPapers() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const yearTerm = yearFilter.value;
+                const topicTerm = topicFilter.value;
+                
+                paperCards.forEach(card => {
+                    const title = card.querySelector('.paper-title').textContent.toLowerCase();
+                    const authors = card.querySelector('.paper-authors').textContent.toLowerCase();
+                    const conference = card.querySelector('.paper-conference').textContent.toLowerCase();
+                    
+                    const matchesSearch = title.includes(searchTerm) || 
+                                         authors.includes(searchTerm) || 
+                                         conference.includes(searchTerm) ||
+                                         searchTerm === '';
+                    
+                    const matchesYear = yearTerm === '' || conference.includes(yearTerm);
+                    const matchesTopic = topicTerm === '' || title.includes(topicTerm.toLowerCase());
+                    
+                    if (matchesSearch && matchesYear && matchesTopic) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            
+            searchInput.addEventListener('input', filterPapers);
+            yearFilter.addEventListener('change', filterPapers);
+            topicFilter.addEventListener('change', filterPapers);
+        });
+    </script>
+
+    <script src="js/animations.js"></script>
+</body>
+</html>

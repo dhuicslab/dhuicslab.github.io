@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy-Preserving Deep Learning - CS Research Laboratory</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ICS Lab</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../papers.html" class="active">Papers</a></li>
+                    <li><a href="../members.html">Members</a></li>
+                </ul>
+            </nav>
+            <!-- <div class="get-help">
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div> -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="paper-detail">
+        <div class="container">
+            <div class="paper-navigation">
+                <a href="../papers.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Papers</a>
+            </div>
+            
+            <div class="paper-header">
+                <div class="paper-main-image fade-in">
+                    <img src="images/paper-1-large.jpg" alt="Paper Visual Representation">
+                </div>
+                <div class="paper-main-info fade-in-delay">
+                    <h1>Privacy-Preserving Deep Learning in Federated Environments</h1>
+                    <div class="paper-meta">
+                        <p class="conference"><i class="fas fa-university"></i> IEEE Symposium on Security and Privacy (SP), 2023</p>
+                        <p class="date"><i class="far fa-calendar-alt"></i> May 2023</p>
+                        <p class="citations"><i class="fas fa-quote-right"></i> Citations: 24</p>
+                    </div>
+                    <div class="paper-authors">
+                        <h3>Authors:</h3>
+                        <ul>
+                            <li><a href="member-detail-1.html">Prof. Sarah Johnson</a></li>
+                            <li><a href="member-detail-4.html">Dr. Michael Chen</a></li>
+                            <li><a href="member-detail-7.html">Li Wei</a></li>
+                        </ul>
+                    </div>
+                    <div class="paper-links">
+                        <a href="#" class="btn-primary"><i class="fas fa-file-pdf"></i> Download PDF</a>
+                        <a href="#" class="btn-secondary"><i class="fas fa-code"></i> View Code Repository</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paper-content">
+                <div class="paper-section slide-in-left">
+                    <h2>Abstract</h2>
+                    <p>
+                        Deep learning models trained on sensitive data are vulnerable to privacy attacks that can reveal information about the training data. This paper introduces a novel framework for privacy-preserving deep learning in federated environments that combines differential privacy, secure aggregation, and model partitioning techniques. We demonstrate that our approach provides strong theoretical privacy guarantees while maintaining high model utility across various tasks and datasets. Experimental results show that our method outperforms existing privacy-preserving techniques in terms of accuracy-privacy tradeoffs and is scalable to large federated networks with hundreds of participants.
+                    </p>
+                </div>
+                
+                <div class="paper-section slide-in-right">
+                    <h2>Key Contributions</h2>
+                    <ul>
+                        <li>A formal framework for analyzing privacy-utility tradeoffs in federated learning environments</li>
+                        <li>A novel hybrid approach that combines differential privacy with secure multi-party computation</li>
+                        <li>Efficient protocols for secure model aggregation with minimal communication overhead</li>
+                        <li>Extensive empirical evaluation on real-world datasets, demonstrating superior performance compared to state-of-the-art methods</li>
+                        <li>Theoretical analysis proving end-to-end privacy guarantees against various attack scenarios</li>
+                    </ul>
+                </div>
+                
+                <div class="paper-section slide-in-left">
+                    <h2>Methodology</h2>
+                    <p>
+                        Our approach consists of three main components: (1) a local differential privacy mechanism for training data perturbation, (2) a secure aggregation protocol for privacy-preserving model updates, and (3) a model partitioning strategy that reduces communication costs and privacy risks. Each client in the federated network applies the differential privacy mechanism to its local updates before sending them to the central aggregator. The secure aggregation protocol ensures that individual updates remain private, while the model partitioning strategy reduces the dimensionality of the exchanged parameters.
+                    </p>
+                </div>
+                
+                <div class="paper-section slide-in-right">
+                    <h2>Results</h2>
+                    <p>
+                        We evaluated our framework on multiple datasets including MNIST, CIFAR-10, and a medical imaging dataset for diagnostic classification. Our method achieved 96.4% of the non-private baseline accuracy on MNIST and 92.7% on CIFAR-10, while providing ε-differential privacy with ε = 2.8. This represents a significant improvement over previous methods, which typically achieve less than 90% of the baseline accuracy at the same privacy level. We also demonstrate that our approach scales efficiently to federated networks with hundreds of participants, with communication costs growing sub-linearly with the number of participants.
+                    </p>
+                </div>
+                
+                <div class="paper-section slide-in-left">
+                    <h2>Conclusion</h2>
+                    <p>
+                        Our work presents a comprehensive solution to the privacy challenges in federated deep learning. By combining differential privacy, secure aggregation, and model partitioning, we achieve a favorable balance between privacy protection and model utility. Our theoretical analysis provides formal privacy guarantees, while our empirical evaluation demonstrates the practical effectiveness of our approach. This work contributes to the development of privacy-preserving machine learning techniques that can enable collaborative model training on sensitive data without compromising individual privacy.
+                    </p>
+                </div>
+                
+                <div class="paper-section related-papers slide-in-right">
+                    <h2>Related Papers</h2>
+                    <div class="related-papers-list">
+                        <a href="paper-detail-3.html" class="related-paper">
+                            <div class="related-paper-info">
+                                <h4>Differential Privacy Guarantees for Neural Network Training</h4>
+                                <p>Sarah Johnson, Emily Parker</p>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                        <a href="paper-detail-5.html" class="related-paper">
+                            <div class="related-paper-info">
+                                <h4>Secure Multi-Party Computation for Collaborative Machine Learning</h4>
+                                <p>Michael Chen, Sarah Johnson, Li Wei</p>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>ICS Lab</h2>
+                    <p>Advancing Computer Science Research</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../papers.html">Papers</a></li>
+                        <li><a href="../members.html">Members</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 图文信息中心822</p>
+                    <p><i class="fas fa-envelope"></i> changshan@dhu.edu.cn</p>
+                    <!-- <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2016 ICS Laboratory. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/animations.js"></script>
+</body>
+</html>

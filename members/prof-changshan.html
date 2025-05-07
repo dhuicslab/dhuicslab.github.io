@@ -192,15 +192,17 @@
                 
                 <div class="member-section publications slide-in-left">
                     <h2>Selected Publications</h2>
-                    <div class="publications-list">
-                        <a href="../papers/paper-detail-1.html" class="publication-item">
+                    <div class="publications-list" id="changshan-publications">
+                        <!-- <a href="../papers/cs-faired.html" class="publication-item">
                             <div class="publication-info">
-                                <h4>Privacy-Preserving Deep Learning in Federated Environments</h4>
-                                <p>Sarah Johnson, Michael Chen, Li Wei</p>
-                                <p>IEEE Symposium on Security and Privacy (SP), 2023</p>
+                                <h4>FairFed: Improving Fairness and Efficiency of Contribution Evaluation in Federated Learning via Cooperative Shapley Value</h4>
+                                <p>Yiqi Liu; Shan Chang; Ye Liu; Bo Li; Cong Wang</p>
+                                <p>IEEE INFOCOM 2024 - IEEE Conference on Computer Communications</p>
                             </div>
                             <i class="fas fa-chevron-right"></i>
-                        </a>
+                        </a> -->
+
+                        <!-- JS 生成论文列表 -->
                     </div>
                 </div>
                 
@@ -246,5 +248,34 @@
         </div>
     </footer>
     <script src="../js/animations.js"></script>
+
+    <script src="../js/papers-data.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const publicationList = document.getElementById('changshan-publications');
+
+        const shanPapers = papersData.filter(paper =>
+          paper.authors.some(author => author.name.toLowerCase() === 'shan chang')
+        );
+
+        shanPapers.forEach(paper => {
+          const link = document.createElement('a');
+          link.href = `../papers/paper-detail.html?id=${paper.id}`;
+          link.className = 'publication-item';
+
+          link.innerHTML = `
+            <div class="publication-info">
+              <h4>${paper.title}</h4>
+              <p>${paper.authors.map(a => a.name).join('; ')}</p>
+              <p>${paper.conference}</p>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+          `;
+
+          publicationList.appendChild(link);
+        });
+      });
+    </script>
+
 </body>
 </html>

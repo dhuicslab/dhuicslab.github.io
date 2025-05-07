@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Sarah Johnson - CS Research Laboratory</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ICS Lab</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../papers.html">Papers</a></li>
+                    <li><a href="../members.html" class="active">Members</a></li>
+                </ul>
+            </nav>
+            <!-- <div class="get-help">
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div> -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="member-detail">
+        <div class="membercontainer">
+            <div class="member-navigation">
+                <a href="../members.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Members</a>
+            </div>
+            
+            <div class="member-header">
+                <div class="member-profile-image fade-in">
+                    <img src="../images/member/lixin.jpg">
+                </div>
+                <div class="member-main-info fade-in-delay">
+                    <h1 id="profchang">Grad. 李鑫</h1>
+                    <div class="member-contact">
+                        <p><i class="fas fa-envelope"></i> lixin@mail.dhu.edu.cn</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="member-content">
+                <div class="member-section slide-in-left">
+                    <h2>Biography</h2>
+                    <p>
+                        \
+                    </p>
+                </div>
+                <div class="member-section slide-in-left">
+                    <h2>Education</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>2023.09-2026.06，东华大学，硕士</h3>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3>2019.09-2023.06，太原科技大学，本科</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                
+                <div class="member-section publications slide-in-left">
+                    <h2>Selected Publications</h2>
+                    <div class="publications-list" id="lixin-publications">
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>ICS Lab</h2>
+                    <p>Advancing Computer Science Research</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../papers.html">Papers</a></li>
+                        <li><a href="../members.html">Members</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 图文信息中心822</p>
+                    <p><i class="fas fa-envelope"></i> changshan@dhu.edu.cn</p>
+                    <!-- <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2016 ICS Laboratory. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/animations.js"></script>
+
+    <script src="../js/papers-data.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const publicationList = document.getElementById('lixin-publications');
+  
+          const shanPapers = papersData.filter(paper =>
+            paper.authors.some(author => author.name.toLowerCase() === 'xin li')
+          );
+  
+          shanPapers.forEach(paper => {
+            const link = document.createElement('a');
+            link.href = `../papers/paper-detail.html?id=${paper.id}`;
+            link.className = 'publication-item';
+  
+            link.innerHTML = `
+              <div class="publication-info">
+                <h4>${paper.title}</h4>
+                <p>${paper.authors.map(a => a.name).join('; ')}</p>
+                <p>${paper.conference}</p>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            `;
+  
+            publicationList.appendChild(link);
+          });
+        });
+      </script>
+</body>
+</html>

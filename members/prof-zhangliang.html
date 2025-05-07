@@ -157,15 +157,8 @@
                 
                 <div class="member-section publications slide-in-left">
                     <h2>Selected Publications</h2>
-                    <div class="publications-list">
-                        <a href="../papers/paper-detail-1.html" class="publication-item">
-                            <div class="publication-info">
-                                <h4>Privacy-Preserving Deep Learning in Federated Environments</h4>
-                                <p>Sarah Johnson, Michael Chen, Li Wei</p>
-                                <p>IEEE Symposium on Security and Privacy (SP), 2023</p>
-                            </div>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
+                    <div class="publications-list" id="zhangliang-publications">
+                        
                     </div>
                 </div>
                 
@@ -211,5 +204,33 @@
         </div>
     </footer>
     <script src="../js/animations.js"></script>
+
+    <script src="../js/papers-data.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const publicationList = document.getElementById('zhangliang-publications');
+  
+          const shanPapers = papersData.filter(paper =>
+            paper.authors.some(author => author.name.toLowerCase() === 'liang zhang')
+          );
+  
+          shanPapers.forEach(paper => {
+            const link = document.createElement('a');
+            link.href = `../papers/paper-detail.html?id=${paper.id}`;
+            link.className = 'publication-item';
+  
+            link.innerHTML = `
+              <div class="publication-info">
+                <h4>${paper.title}</h4>
+                <p>${paper.authors.map(a => a.name).join('; ')}</p>
+                <p>${paper.conference}</p>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+            `;
+  
+            publicationList.appendChild(link);
+          });
+        });
+      </script>
 </body>
 </html>

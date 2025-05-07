@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy-Preserving Deep Learning - CS Research Laboratory</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ICS Lab</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../papers.html" class="active">Papers</a></li>
+                    <li><a href="../members.html">Members</a></li>
+                </ul>
+            </nav>
+            <!-- <div class="get-help">
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div> -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="paper-detail">
+        <div class="papercontainer">
+          <div class="paper-navigation">
+            <a href="../papers.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Papers</a>
+          </div>
+          
+          <div class="paper-header">
+            <div class="paper-main-image fade-in">
+              <img src="" alt="Paper Visual Representation">
+            </div>
+            <div class="paper-main-info fade-in-delay">
+              <h1></h1>
+              <div class="paper-meta">
+                <p class="conference"><i class="fas fa-university"></i></p>
+                <p class="date"><i class="far fa-calendar-alt"></i></p>
+                <p class="citations"><i class="fa fa-address-card"></i></p>
+                <a href="" target="_blank"><i class="fas fa-file-pdf"></i> IEEE</a>
+              </div>
+              <div class="paper-authors">
+                <h3>Authors:</h3>
+                <ul></ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="paper-content">
+            <div class="paper-section slide-in-left">
+              <h2>Abstract</h2>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>ICS Lab</h2>
+                    <p>Advancing Computer Science Research</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../papers.html">Papers</a></li>
+                        <li><a href="../members.html">Members</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 图文信息中心822</p>
+                    <p><i class="fas fa-envelope"></i> changshan@dhu.edu.cn</p>
+                    <!-- <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p> -->
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2016 ICS Laboratory. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/animations.js"></script>
+
+    <!-- paper-detail.html -->
+    <script src="../js/papers-data.js"></script>
+    <script>
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+  
+      function renderPaperDetail(paper) {
+        document.querySelector(".paper-main-image img").src = "../"+paper.image;
+        document.querySelector(".paper-main-info h1").textContent = paper.title;
+        document.querySelector(".paper-meta .conference").innerHTML = `<i class="fas fa-university"></i> ${paper.conference}`;
+        document.querySelector(".paper-meta .date").innerHTML = `<i class="far fa-calendar-alt"></i> ${paper.date}`;
+        document.querySelector(".paper-meta .citations").innerHTML = `<i class="fa fa-address-card"></i> DOI: ${paper.doi}`;
+        document.querySelector(".paper-meta a").href = paper.externalLink;
+        document.querySelector(".paper-authors ul").innerHTML = paper.authors.map(a => {
+          return a.link ? `<li><a href="../${a.link}">${a.name}</a></li>` : `<li>${a.name}</li>`;
+        }).join("");
+        
+        document.querySelector(".paper-content p").textContent = paper.abstract;
+      }
+  
+      window.addEventListener('DOMContentLoaded', () => {
+        const id = getQueryParam("id");
+        const paper = papersData.find(p => p.id === id);
+        if (paper) {
+          renderPaperDetail(paper);
+        } else {
+          document.querySelector(".papercontainer").innerHTML = "<p>Paper not found.</p>";
+        }
+      });
+    </script>
+
+</body>
+</html>

@@ -47,16 +47,12 @@
             <div class="filter-options">
                 <select id="year-filter" class="filter-select">
                     <option value="">All Years</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
                     <option value="2023">2023</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>
-                </select>
-                <select id="topic-filter" class="filter-select">
-                    <option value="">All Topics</option>
-                    <option value="Privacy">Privacy & Security</option>
-                    <option value="Neural">Neural Networks</option>
-                    <option value="Vision">Computer Vision</option>
                 </select>
             </div>
         </div>
@@ -65,27 +61,32 @@
     <section class="papers-list">
         <div class="container">
             <div class="papers-container">
-                <div class="paper-card fade-in">
+                <!-- <div class="paper-card fade-in">
                     <div class="paper-image">
-                        <img src="images/paper-1.jpg" alt="Paper Thumbnail">
+                        <img src="images/paper/cs-fairfed.png" alt="Paper Thumbnail">
                     </div>
                     <div class="paper-info">
-                        <h3 class="paper-title">Privacy-Preserving Deep Learning in Federated Environments</h3>
-                        <p class="paper-authors">Sarah Johnson, Michael Chen, Li Wei</p>
-                        <p class="paper-conference">IEEE Symposium on Security and Privacy (SP), 2023</p>
-                        <a href="papers/paper-detail-1.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="paper-title">FairFed: Improving Fairness and Efficiency of Contribution Evaluation in Federated Learning via Cooperative Shapley Value</h3>
+                        <p class="paper-authors">Yiqi Liu;
+                            Shan Chang;
+                            Ye Liu;
+                            Bo Li;
+                            Cong Wang</p>
+                        <p class="paper-conference">IEEE INFOCOM 2024 - IEEE Conference on Computer Communications</p>
+                        <a href="papers/cs-faired.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
+                
                 <div class="paper-card fade-in-delay">
                     <div class="paper-image">
-                        <img src="images/paper-2.jpg" alt="Paper Thumbnail">
+                        <img src="images/paper/cs-friendseeker.png" alt="Paper Thumbnail">
                     </div>
                     <div class="paper-info">
-                        <h3 class="paper-title">MicroNet: Efficient Neural Network Architecture for Mobile Devices</h3>
-                        <p class="paper-authors">David Rodriguez, Jessica Kim, Thomas Clark</p>
-                        <p class="paper-conference">Neural Information Processing Systems (NeurIPS), 2022</p>
-                        <a href="paper-detail-2.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="paper-title">FriendSeeker: Inferring Hidden Friendship in Mobile Social Networks with Sparse Check-in Data</h3>
+                        <p class="paper-authors">Shan Chang; Yuting Tao; Hongzi Zhu; Bo Li</p>
+                        <p class="paper-conference">2023 IEEE 43rd International Conference on Distributed Computing Systems (ICDCS)</p>
+                        <a href="papers/cs-friendSeeker.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -99,55 +100,10 @@
                         <p class="paper-conference">ACM Conference on Computer and Communications Security (CCS), 2023</p>
                         <a href="paper-detail-3.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="paper-card fade-in">
-                    <div class="paper-image">
-                        <img src="images/paper-4.jpg" alt="Paper Thumbnail">
-                    </div>
-                    <div class="paper-info">
-                        <h3 class="paper-title">Quantization Techniques for Low-Power Neural Network Inference</h3>
-                        <p class="paper-authors">Jessica Kim, David Rodriguez</p>
-                        <p class="paper-conference">International Conference on Machine Learning (ICML), 2022</p>
-                        <a href="paper-detail-4.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
 
-                <div class="paper-card fade-in-delay">
-                    <div class="paper-image">
-                        <img src="images/paper-5.jpg" alt="Paper Thumbnail">
-                    </div>
-                    <div class="paper-info">
-                        <h3 class="paper-title">Secure Multi-Party Computation for Collaborative Machine Learning</h3>
-                        <p class="paper-authors">Michael Chen, Sarah Johnson, Li Wei</p>
-                        <p class="paper-conference">USENIX Security Symposium, 2022</p>
-                        <a href="paper-detail-5.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
 
-                <div class="paper-card fade-in-delay-2">
-                    <div class="paper-image">
-                        <img src="images/paper-6.jpg" alt="Paper Thumbnail">
-                    </div>
-                    <div class="paper-info">
-                        <h3 class="paper-title">Deep Learning for 3D Object Recognition in Unstructured Environments</h3>
-                        <p class="paper-authors">James Wong, Sophia Martinez, Robert Johnson</p>
-                        <p class="paper-conference">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023</p>
-                        <a href="paper-detail-6.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="paper-card fade-in">
-                    <div class="paper-image">
-                        <img src="images/paper-7.jpg" alt="Paper Thumbnail">
-                    </div>
-                    <div class="paper-info">
-                        <h3 class="paper-title">Multi-Object Tracking in Dynamic Scenes with Occlusion</h3>
-                        <p class="paper-authors">Sophia Martinez, James Wong</p>
-                        <p class="paper-conference">European Conference on Computer Vision (ECCV), 2022</p>
-                        <a href="paper-detail-7.html" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -186,13 +142,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('paper-search');
             const yearFilter = document.getElementById('year-filter');
-            const topicFilter = document.getElementById('topic-filter');
+
             const paperCards = document.querySelectorAll('.paper-card');
             
             function filterPapers() {
                 const searchTerm = searchInput.value.toLowerCase();
                 const yearTerm = yearFilter.value;
-                const topicTerm = topicFilter.value;
+
                 
                 paperCards.forEach(card => {
                     const title = card.querySelector('.paper-title').textContent.toLowerCase();
@@ -205,9 +161,9 @@
                                          searchTerm === '';
                     
                     const matchesYear = yearTerm === '' || conference.includes(yearTerm);
-                    const matchesTopic = topicTerm === '' || title.includes(topicTerm.toLowerCase());
+
                     
-                    if (matchesSearch && matchesYear && matchesTopic) {
+                    if (matchesSearch && matchesYear) {
                         card.style.display = 'flex';
                     } else {
                         card.style.display = 'none';
@@ -222,5 +178,68 @@
     </script>
 
     <script src="js/animations.js"></script>
+
+    <!-- papers.html -->
+    <script src="js/papers-data.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const searchInput = document.getElementById('paper-search');
+          const yearFilter = document.getElementById('year-filter');
+          const container = document.querySelector('.papers-container');
+      
+          function renderPapers() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const yearTerm = yearFilter.value;
+      
+            container.innerHTML = ''; // 清空旧列表
+      
+            papersData.forEach(paper => {
+              const title = paper.title.toLowerCase();
+              const authors = paper.authors.map(a => a.name.toLowerCase()).join('; ');
+              const conference = paper.conference.toLowerCase();
+              const yearInDate = paper.date.match(/\b(20\d{2})\b/); // 提取年份
+      
+              const matchesSearch =
+                title.includes(searchTerm) ||
+                authors.includes(searchTerm) ||
+                conference.includes(searchTerm) ||
+                searchTerm === '';
+      
+              const matchesYear =
+                yearTerm === '' || (yearInDate && yearInDate[1] === yearTerm);
+      
+              if (matchesSearch && matchesYear) {
+                const card = document.createElement('div');
+                card.className = 'paper-card fade-in';
+                card.innerHTML = `
+                  <div class="paper-image">
+                    <img src="${paper.image}" alt="Paper Thumbnail">
+                  </div>
+                  <div class="paper-info">
+                    <h3 class="paper-title">${paper.title}</h3>
+                    <p class="paper-authors">${paper.authors.map(a => a.name).join('; ')}</p>
+                    <p class="paper-conference">${paper.conference}</p>
+                    <a href="papers/paper-detail.html?id=${paper.id}" class="read-more">View Details <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                `;
+                container.appendChild(card);
+              }
+            });
+          }
+      
+          // 初次渲染
+          renderPapers();
+      
+          // 添加监听器
+          searchInput.addEventListener('input', renderPapers);
+          yearFilter.addEventListener('change', renderPapers);
+      
+          // 点击放大镜按钮时也执行搜索（可选）
+          const searchBtn = document.querySelector('.search-btn');
+          if (searchBtn) {
+            searchBtn.addEventListener('click', renderPapers);
+          }
+        });
+      </script>
 </body>
 </html>
